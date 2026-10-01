@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-size: 24px;
+  color: black;
+  font-weight: 500;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+}
+
+main {
+  height: 100vh;
+  border: 1px solid gray;
+  width: 30%;
+}
+
+nav {
+  height: 13%;
+  /* border: solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > section {
+  height: 74%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: solid yellow; */
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 90%;
+}
