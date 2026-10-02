@@ -9,15 +9,15 @@ const Navbar = () => {
       <ul>
         <li>
           {/* <Link>Logo</Link> */}
-          <Link to='/addPost'>
+          <Link to='/layout/addPost'>
             <IoMdAdd />
           </Link>
         </li>
         <li>
-          <Link to='/'>Logo</Link>
+          <Link to='/layout'>Logo</Link>
         </li>
         <li>
-          <Link to='/notification'>
+          <Link to='/layout/notification'>
             <FaRegHeart />
           </Link>
         </li>

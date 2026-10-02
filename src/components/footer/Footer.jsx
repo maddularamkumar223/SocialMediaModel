@@ -5,26 +5,26 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <nav style={{borderTop:"1px solid gray"}}>
+    <nav style={{ borderTop: '1px solid gray' }}>
       <ul>
         <li>
-          <Link to='/'>
+          <Link to='/layout'>
             <IoHomeOutline />
           </Link>
         </li>
         <li>
-          <Link to='/messages'>
+          <Link to='/layout/messages'>
             <FaRegMessage />
           </Link>
         </li>
         <li>
-          <Link to='/search'>
+          <Link to='/layout/search'>
             {' '}
             <IoMdSearch />
           </Link>
         </li>
         <li>
-          <Link to='/profile'>
+          <Link to='/layout/profile'>
             <FaRegUser />
           </Link>
         </li>

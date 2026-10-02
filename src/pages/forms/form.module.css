@@ -1,0 +1,49 @@
+#formData {
+  border: solid;
+  height: 95%;
+  width: 90%;
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#formData label {
+  display: block;
+}
+
+#formData label,
+#formData input,
+#formData button {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+#formData h1,
+#formData aside,
+#formData p {
+  width: 100%;
+}
+#formData h1,
+#formData p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#formData input,
+#formData button {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#formData a {
+  color: blue;
+}
+
+#formData #gender {
+  width: 20px;
+}

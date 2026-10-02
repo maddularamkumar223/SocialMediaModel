@@ -6,6 +6,9 @@ import Notification from '../pages/notifictions/Notfication'
 import Profile from '../pages/profile/Profile'
 import Messages from '../pages/messages/Messages'
 import AddPost from '../pages/forms/post/AddPost'
+import Layout from '../Layout'
+import Register from '../pages/forms/auth/Register'
+import Login from '../pages/forms/auth/Login'
 
 let RouteData = createBrowserRouter([
   {
@@ -13,27 +16,41 @@ let RouteData = createBrowserRouter([
     element: <App></App>,
     children: [
       {
+        path: '/register',
+        element: <Register></Register>
+      },
+      {
+        index: true,
+        element: <Login></Login>
+      }
+    ]
+  },
+  {
+    path: '/layout',
+    element: <Layout></Layout>,
+    children: [
+      {
         index: true,
         element: <HomePage></HomePage>
       },
       {
-        path: '/search',
+        path: '/layout/search',
         element: <Search></Search>
       },
       {
-        path: '/notification',
+        path: '/layout/notification',
         element: <Notification></Notification>
       },
       {
-        path: '/profile',
+        path: '/layout/profile',
         element: <Profile></Profile>
       },
       {
-        path: '/messages',
+        path: '/layout/messages',
         element: <Messages></Messages>
       },
       {
-        path: '/addPost',
+        path: '/layout/addPost',
         element: <AddPost></AddPost>
       }
     ]

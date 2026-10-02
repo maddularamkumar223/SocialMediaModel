@@ -30,6 +30,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(181, 41, 181),
+    rgb(229, 191, 210)
+  );
 }
 
 main > section {
@@ -37,7 +42,6 @@ main > section {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: solid yellow; */
 }
 
 nav ul {
@@ -46,4 +50,13 @@ nav ul {
   justify-content: space-between;
   list-style: none;
   width: 90%;
+}
+
+main > #appData {
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(181, 41, 181),
+    rgb(229, 191, 210)
+  );
+  height: 100%;
 }
