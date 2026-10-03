@@ -39,7 +39,13 @@ const Login = () => {
   return (
     <form id={Style.formData} onSubmit={handleSubmit}>
       <aside>
-        <h1>Social Media</h1>
+        <h1>
+          <img
+            src='https://thumbs.wbm.im/pw/small/26cdaa21d7039546ac5aa10a591d6498.png'
+            alt=''
+            height="100px"
+          />
+        </h1>
       </aside>
       {loginData.map(data => {
         return (

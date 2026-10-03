@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Input from '../../../components/Input'
 import Style from '../form.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { addUser } from '../../../services/authService'
+import { updateStatus } from '../../../featues/authSlice'
 
 const Register = () => {
+  let { status, message, loading } = useSelector(state => state.auth)
   let [registerDetails, setRegisterDetails] = useState({
     name: '',
     email: '',
@@ -17,10 +21,32 @@ const Register = () => {
     let { name, value } = e.target
     setRegisterDetails({ ...registerDetails, [name]: value })
   }
+  let dispatch = useDispatch()
   let handleSubmit = e => {
     e.preventDefault()
     console.log(registerDetails)
+    if (
+      name === '' ||
+      password === '' ||
+      gender === '' ||
+      email === '' ||
+      dob === ''
+    ) {
+      alert('Fill All The Fields')
+    } else {
+      dispatch(addUser(registerDetails))
+    }
   }
+
+  let navigate = useNavigate()
+
+  useEffect(() => {
+    if (status === 201) {
+      alert(message)
+      dispatch(updateStatus())
+      navigate('/')
+    }
+  }, [status])
 
   let registerData = [
     {
@@ -78,7 +104,7 @@ const Register = () => {
         <span>Others</span>
       </aside>
       <aside>
-        <button>Sign Up</button>
+        <button>{loading ? 'Loading...' : 'Sign up'}</button>
       </aside>
 
       <p>

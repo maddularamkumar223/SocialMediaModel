@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "name": "Ram",
+      "email": "ram@gmail.com",
+      "password": "123456",
+      "gender": "male",
+      "dob": "2026-09-29",
+      "id": "LyngK41URek"
+    },
+    {
+      "name": "Ravi",
+      "email": "ravi@gmail.com",
+      "password": "123456",
+      "gender": "male",
+      "dob": "2026-09-29",
+      "id": "DY8xW1JgGBI"
+    }
+  ],
+  "messages": [],
+  "notifications": [],
+  "posts": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
