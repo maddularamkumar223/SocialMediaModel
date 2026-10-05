@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { addUser } from '../services/authService'
+import { addUser, validation } from '../services/authService'
 
 let initialState = {
   loading: false,
@@ -25,9 +25,18 @@ let AuthSlice = createSlice({
         state.status = action.payload.status
         state.message = action.payload.message
       })
-      .addCase(addUser.rejected, (state, action) => {
+      .addCase(addUser.rejected, state => {
         state.loading = false
         state.message = 'Try Again'
+      })
+      .addCase(validation.pending, state => {
+        state.loading = true
+      })
+      .addCase(validation.fulfilled, (state, action) => {
+        state.loading = false
+        state.status = action.payload.status
+        state.user = action.payload.user
+        state.message = action.payload.message
       })
   }
 })

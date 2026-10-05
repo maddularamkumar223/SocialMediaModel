@@ -19,6 +19,13 @@
   ],
   "messages": [],
   "notifications": [],
-  "posts": [],
+  "posts": [
+    {
+      "image": "blob:http://localhost:5173/134da62d-54c4-4801-9416-e510443624b8",
+      "caption": "asdfsa",
+      "user_id": "LyngK41URek",
+      "id": "hCX-LWTtQvo"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

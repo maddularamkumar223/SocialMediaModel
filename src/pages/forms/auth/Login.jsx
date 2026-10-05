@@ -1,7 +1,9 @@
-import { useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import Input from '../../../components/Input'
 import Style from '../form.module.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { validation } from '../../../services/authService'
 
 const Login = () => {
   let [loginDetails, setLoginDetails] = useState({
@@ -31,11 +33,27 @@ const Login = () => {
   }
 
   let navigate = useNavigate()
+  let dispatch = useDispatch()
+  let { loading, status, message, updateStatus, user } = useSelector(
+    state => state.auth
+  )
   let handleSubmit = e => {
     e.preventDefault()
     console.log(loginDetails)
-    navigate('/layout')
+    dispatch(validation(loginDetails))
   }
+
+  useEffect(() => {
+    if (status === 200) {
+      alert(message)
+      localStorage.setItem('id', user.id)
+      navigate('/layout')
+      dispatch(updateStatus())
+    } else if (status === 404) {
+      alert(message)
+    }
+  }, [status])
+
   return (
     <form id={Style.formData} onSubmit={handleSubmit}>
       <aside>
@@ -43,7 +61,7 @@ const Login = () => {
           <img
             src='https://thumbs.wbm.im/pw/small/26cdaa21d7039546ac5aa10a591d6498.png'
             alt=''
-            height="100px"
+            height='100px'
           />
         </h1>
       </aside>
@@ -60,7 +78,7 @@ const Login = () => {
         )
       })}
       <aside>
-        <button>Login</button>
+        <button>{loading ? 'Loading...' : 'Login'}</button>
       </aside>
       <p>
         Dont' Have Account? <Link to='/register'>Sign Up</Link>
