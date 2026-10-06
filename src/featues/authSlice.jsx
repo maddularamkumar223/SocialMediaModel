@@ -13,6 +13,10 @@ let AuthSlice = createSlice({
   reducers: {
     updateStatus: state => {
       state.status = null
+    },
+    logout:(state)=>{
+      state.user = null
+      localStorage.removeItem("id")
     }
   },
   extraReducers: builder => {
@@ -41,5 +45,5 @@ let AuthSlice = createSlice({
   }
 })
 
-export let { updateStatus } = AuthSlice.actions
+export let { updateStatus,logout } = AuthSlice.actions
 export default AuthSlice.reducer

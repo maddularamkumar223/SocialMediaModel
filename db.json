@@ -21,10 +21,16 @@
   "notifications": [],
   "posts": [
     {
-      "image": "blob:http://localhost:5173/134da62d-54c4-4801-9416-e510443624b8",
-      "caption": "asdfsa",
-      "user_id": "LyngK41URek",
-      "id": "hCX-LWTtQvo"
+      "image": "blob:http://localhost:5173/188e6bc1-b8a6-485e-80df-df8fe09582bc",
+      "caption": "asfsad",
+      "user_id": "DY8xW1JgGBI",
+      "id": "PQ9X9tHwOpM"
+    },
+    {
+      "image": "blob:http://localhost:5173/df32a7d9-cf5e-45bf-abc5-67369824d3d0",
+      "caption": "zsfsdf",
+      "user_id": "DY8xW1JgGBI",
+      "id": "wQb7PaZMVtw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

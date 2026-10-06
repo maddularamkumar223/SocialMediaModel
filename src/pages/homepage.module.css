@@ -1,0 +1,42 @@
+#postsContainer {
+  /* border: solid red; */
+  height: 100%;
+  width: 97%;
+  overflow: scroll;
+  scrollbar-width: none;
+  aside {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    img {
+      flex-basis: 80%;
+      border: solid;
+      width: 100%;
+    }
+    figcaption {
+      flex-basis: 10%;
+    }
+    
+
+    div,
+    figcaption {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      padding: 10px;
+    }
+
+    div {
+      flex-basis: 10%;
+      justify-content: space-between;
+    }
+
+  }
+}
+
+#postsContainer #delete {
+  background-image: linear-gradient(red);
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
+}
