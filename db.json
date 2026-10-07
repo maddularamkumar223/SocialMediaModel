@@ -6,7 +6,18 @@
       "password": "123456",
       "gender": "male",
       "dob": "2026-09-29",
-      "id": "LyngK41URek"
+      "id": "LyngK41URek",
+      "following": [
+        "DY8xW1JgGBI",
+        "aqgeRHRAR90",
+        "26q0lpVBVSI",
+        "lDnr2M2LE70",
+        "P_2V3pD-lVY"
+      ],
+      "followers": [
+        "DY8xW1JgGBI",
+        "P_2V3pD-lVY"
+      ]
     },
     {
       "name": "Ravi",
@@ -14,7 +25,83 @@
       "password": "123456",
       "gender": "male",
       "dob": "2026-09-29",
-      "id": "DY8xW1JgGBI"
+      "id": "DY8xW1JgGBI",
+      "following": [
+        "LyngK41URek",
+        "6GbGBEO7plA",
+        "P_2V3pD-lVY"
+      ],
+      "followers": [
+        "LyngK41URek",
+        "P_2V3pD-lVY"
+      ]
+    },
+    {
+      "name": "Siri",
+      "email": "siri@gmail.com",
+      "password": "123456",
+      "gender": "female",
+      "dob": "2026-10-13",
+      "id": "6GbGBEO7plA",
+      "following": [],
+      "followers": [
+        "DY8xW1JgGBI"
+      ]
+    },
+    {
+      "name": "Akhil",
+      "email": "akhil@gmail.com",
+      "password": "123456",
+      "gender": "male",
+      "dob": "2026-10-14",
+      "id": "26q0lpVBVSI",
+      "following": [],
+      "followers": [
+        "LyngK41URek",
+        "P_2V3pD-lVY"
+      ]
+    },
+    {
+      "name": "Sravani",
+      "email": "sravani@gmail.com",
+      "password": "123456",
+      "gender": "female",
+      "dob": "2026-10-08",
+      "id": "P_2V3pD-lVY",
+      "following": [
+        "LyngK41URek",
+        "DY8xW1JgGBI",
+        "26q0lpVBVSI"
+      ],
+      "followers": [
+        "LyngK41URek",
+        "DY8xW1JgGBI"
+      ]
+    },
+    {
+      "name": "Himasri",
+      "email": "himasri@gamil.com",
+      "password": "123456",
+      "gender": "female",
+      "dob": "2026-10-02",
+      "following": [],
+      "followers": [
+        "LyngK41URek"
+      ],
+      "id": "lDnr2M2LE70"
+    },
+    {
+      "name": "Keerthi",
+      "email": "keerthi@gmail.com",
+      "password": "123456",
+      "gender": "female",
+      "dob": "2026-09-29",
+      "following": [],
+      "followers": [
+        "LyngK41URek",
+        "LyngK41URek"
+      ],
+      "id": "aqgeRHRAR90"
     }
   ],
   "messages": [],

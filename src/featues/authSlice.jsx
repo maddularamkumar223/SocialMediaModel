@@ -1,11 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { addUser, validation } from '../services/authService'
+import {
+  addUser,
+  fetchUsers,
+  follow,
+  validation
+} from '../services/authService'
 
 let initialState = {
   loading: false,
   message: null,
   status: null,
-  user: null
+  user: null,
+  users: []
 }
 let AuthSlice = createSlice({
   name: 'Auth Slice',
@@ -14,9 +20,9 @@ let AuthSlice = createSlice({
     updateStatus: state => {
       state.status = null
     },
-    logout:(state)=>{
+    logout: state => {
       state.user = null
-      localStorage.removeItem("id")
+      localStorage.removeItem('id')
     }
   },
   extraReducers: builder => {
@@ -42,8 +48,15 @@ let AuthSlice = createSlice({
         state.user = action.payload.user
         state.message = action.payload.message
       })
+      .addCase(fetchUsers.fulfilled, (state, action) => {
+        state.users = action.payload.filter(user => user.id !== state.user.id)
+      })
+      .addCase(follow.fulfilled, (state, action) => {
+        state.status = action.payload.status
+        state.user.following = [...state.user.following, action.payload.id]
+      })
   }
 })
 
-export let { updateStatus,logout } = AuthSlice.actions
+export let { updateStatus, logout } = AuthSlice.actions
 export default AuthSlice.reducer

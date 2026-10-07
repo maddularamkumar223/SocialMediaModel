@@ -34,7 +34,7 @@ const Register = () => {
     ) {
       alert('Fill All The Fields')
     } else {
-      dispatch(addUser(registerDetails))
+      dispatch(addUser({ ...registerDetails, following: [], followers: [] }))
     }
   }
 

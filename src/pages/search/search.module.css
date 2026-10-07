@@ -1,0 +1,45 @@
+#userContainer {
+  /* border: solid; */
+  height: 90%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow: scroll;
+  scrollbar-width: none;
+
+  aside {
+    border: 1px solid;
+    border-radius: 20px;
+    height: 40%;
+    width: 40%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    div {
+      height: 50%;
+      width: 50%;
+      border: solid;
+      border-radius: 100%;
+      display: grid;
+      place-items: center;
+      font-size: 50px;
+    }
+    p {
+      font-size: 20px;
+    }
+    button {
+      width: 100%;
+      padding: 5px;
+      border-radius: 20px;
+      color: white;
+      background-image: linear-gradient(blue);
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
