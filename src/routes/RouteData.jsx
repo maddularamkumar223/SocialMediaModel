@@ -9,6 +9,7 @@ import AddPost from '../pages/forms/post/AddPost'
 import Layout from '../Layout'
 import Register from '../pages/forms/auth/Register'
 import Login from '../pages/forms/auth/Login'
+import DisplayMessages from '../pages/messages/DisplayMessages'
 
 let RouteData = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ let RouteData = createBrowserRouter([
       {
         path: '/layout/addPost',
         element: <AddPost></AddPost>
+      },
+      {
+        path: '/layout/displayMessage',
+        element: <DisplayMessages></DisplayMessages>
       }
     ]
   }
